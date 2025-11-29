@@ -22,6 +22,11 @@ export const metadata: Metadata = {
   description:
     "Leading technology company providing innovative solutions and services to help businesses grow and succeed.",
   keywords: "technology, software, solutions, business, innovation",
+  icons: {
+    icon: "/assets/images/logo.jpg",
+    shortcut: "/assets/images/logo.jpg",
+    apple: "/assets/images/logo.jpg",
+  },
 };
 
 export default function RootLayout({
