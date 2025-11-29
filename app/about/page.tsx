@@ -98,30 +98,34 @@ export default function About() {
           </h2>
           <div className="space-y-6 text-[#666666] leading-relaxed">
             <p>
-              Founded in 2015, Decra Technologies began with a simple mission:
-              to make cutting-edge technology accessible to businesses of all
-              sizes. What started as a small team of passionate developers has
-              grown into a full-service technology company serving clients
-              across multiple industries.
+              Decra Technologies opened its doors in 2025 with a clear belief:
+              modern businesses deserve technology that feels effortless,
+              scalable, and built for the pace of tomorrow. What began as a
+              focused group of builders and problem-solvers quickly grew into a
+              team that treats every project like a small spark with the
+              potential to light up an entire industry.
             </p>
             <p>
-              Over the years, we've completed hundreds of successful projects,
-              helping startups scale, enterprises modernize, and organizations
-              transform their digital presence. Our commitment to quality,
-              innovation, and client success has earned us a reputation as a
-              trusted technology partner.
+              From our first deployments to the robust platforms we build today,
+              we&apos;ve stayed rooted in one idea—technology should move with
+              you, not against you. In just a short time, we&apos;ve partnered
+              with clients across sectors, helping them launch products,
+              streamline operations, and create digital experiences that feel
+              polished and purposeful.
             </p>
             <p>
-              Today, we continue to push the boundaries of what's possible,
-              leveraging the latest technologies and best practices to deliver
-              solutions that make a real difference for our clients.
+              As we grow, so does our ambition. We continue exploring new tools,
+              bold ideas, and smarter ways to solve real-world challenges. Decra
+              Technologies isn&apos;t just keeping up with the future—we&apos;re
+              shaping a small piece of it for every client who walks through our
+              digital doorway. 🚀
             </p>
           </div>
         </motion.div>
       </Section>
 
       {/* Team Section */}
-      <Section className="bg-white">
+      {/* <Section className="bg-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -191,7 +195,7 @@ export default function About() {
             </motion.div>
           ))}
         </motion.div>
-      </Section>
+      </Section> */}
 
       {/* Values Section */}
       <Section className="bg-gray-50">
@@ -199,6 +203,7 @@ export default function About() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
           className="text-center mb-8"
         >
           <h2 className="text-3xl sm:text-4xl font-bold text-[#1A1A1A] mb-4">
@@ -206,7 +211,13 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           {[
             {
               title: "Innovation",
@@ -232,20 +243,54 @@ export default function About() {
           ].map((value, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-white p-6 rounded-xl text-center"
+              variants={itemVariants}
+              whileHover={{
+                scale: 1.05,
+                y: -8,
+                transition: { duration: 0.3 },
+              }}
+              className="bg-white p-6 rounded-xl text-center shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
             >
-              <div className="text-5xl mb-4">{value.icon}</div>
-              <h3 className="text-xl font-semibold text-[#1A1A1A] mb-2">
+              <motion.div
+                initial={{ scale: 0, rotate: -180 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  delay: index * 0.15,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 15,
+                }}
+                whileHover={{
+                  scale: 1.2,
+                  rotate: [0, -10, 10, -10, 0],
+                  transition: { duration: 0.5 },
+                }}
+                className="text-5xl mb-4 inline-block"
+              >
+                {value.icon}
+              </motion.div>
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 + 0.2 }}
+                className="text-xl font-semibold text-[#1A1A1A] mb-2 group-hover:text-[#FF7A00] transition-colors duration-300"
+              >
                 {value.title}
-              </h3>
-              <p className="text-[#666666] text-sm">{value.description}</p>
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.15 + 0.3 }}
+                className="text-[#666666] text-sm"
+              >
+                {value.description}
+              </motion.p>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Section>
     </>
   );

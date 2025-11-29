@@ -3,56 +3,54 @@ export interface Testimonial {
   name: string;
   role: string;
   company: string;
-  image: string;
   content: string;
   rating: number;
 }
 
 export const testimonials: Testimonial[] = [
   {
-    id: '1',
-    name: 'Sarah Johnson',
-    role: 'CEO',
-    company: 'TechStart Inc.',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&h=150&fit=crop&crop=face',
-    content: 'Decra Technologies transformed our business with their innovative solutions. Their team is professional, responsive, and truly understands our needs.',
+    id: "1",
+    name: "Ahmed Hassan",
+    role: "CEO",
+    company: "TechPak Solutions, Karachi",
+    content:
+      "Decra Technologies transformed our digital presence completely. Their team delivered our e-commerce platform ahead of schedule, and the quality exceeded all our expectations. Working with them has been a game-changer for our business.",
     rating: 5,
   },
   {
-    id: '2',
-    name: 'Michael Chen',
-    role: 'CTO',
-    company: 'InnovateCorp',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face',
-    content: 'Working with Decra has been an exceptional experience. They delivered our project on time and exceeded our expectations in every way.',
+    id: "2",
+    name: "Fatima Ali",
+    role: "CTO",
+    company: "Innovate Lahore",
+    content:
+      "The mobile application Decra built for us is outstanding. Their attention to detail and understanding of our requirements was impressive. They are truly professional and deliver world-class solutions right here in Pakistan.",
     rating: 5,
   },
   {
-    id: '3',
-    name: 'Emily Rodriguez',
-    role: 'Product Manager',
-    company: 'Digital Solutions',
-    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face',
-    content: 'The quality of work and attention to detail is outstanding. Decra Technologies helped us launch our product successfully and scale our operations.',
+    id: "3",
+    name: "Sarah Johnson",
+    role: "Founder",
+    company: "TechStart Inc., USA",
+    content:
+      "Decra Technologies helped us launch our SaaS platform successfully. Their cloud solutions expertise and modern development practices helped us scale quickly. Working with an international team has been seamless and productive.",
     rating: 5,
   },
   {
-    id: '4',
-    name: 'David Thompson',
-    role: 'Founder',
-    company: 'StartupHub',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face',
-    content: 'Decra Technologies provided us with cutting-edge solutions that gave us a competitive edge. Highly recommended!',
+    id: "4",
+    name: "Michael Chen",
+    role: "Director of Operations",
+    company: "Digital Solutions, Singapore",
+    content:
+      "Working with Decra has been exceptional. They understand global market requirements while delivering international quality standards. Our healthcare mobile app is now serving thousands of users seamlessly across multiple countries.",
     rating: 5,
   },
   {
-    id: '5',
-    name: 'Lisa Anderson',
-    role: 'Director of Operations',
-    company: 'Global Enterprises',
-    image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&h=150&fit=crop&crop=face',
-    content: 'Their expertise in cloud solutions helped us modernize our infrastructure. The team is knowledgeable and always available to help.',
+    id: "5",
+    name: "Emma Williams",
+    role: "Product Manager",
+    company: "FinTech Global, UK",
+    content:
+      "Decra Technologies provided us with cutting-edge financial dashboard solutions. Their team is knowledgeable, responsive, and always goes the extra mile. They have become our trusted technology partner for all future projects.",
     rating: 5,
   },
 ];
-

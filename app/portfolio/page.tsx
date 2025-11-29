@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Section from "@/components/ui/Section";
 import { portfolioItems } from "@/data/portfolio";
 import { ExternalLink } from "lucide-react";
@@ -33,8 +34,8 @@ function PortfolioClient() {
               Our <span className="text-[#FF7A00]">Portfolio</span>
             </h1>
             <p className="text-lg text-[#666666]">
-              Showcasing our successful projects and the impact we've made for
-              our clients.
+              Showcasing our successful projects and the impact we&apos;ve made
+              for our clients.
             </p>
           </motion.div>
         </div>
@@ -69,11 +70,14 @@ function PortfolioClient() {
               transition={{ delay: index * 0.1 }}
               className="group relative bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow"
             >
-              <div className="relative overflow-hidden">
-                <img
+              <div className="relative overflow-hidden h-64">
+                <Image
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                  width={800}
+                  height={600}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  unoptimized
                 />
                 <div className="absolute inset-0 bg-[#FF7A00] opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
                   <a
@@ -115,10 +119,10 @@ function PortfolioClient() {
       <Section className="bg-gray-50">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { number: "200+", label: "Projects Completed" },
-            { number: "150+", label: "Happy Clients" },
-            { number: "50+", label: "Team Members" },
-            { number: "10+", label: "Years Experience" },
+            { number: "15+", label: "Projects Completed" },
+            { number: "10+", label: "Happy Clients" },
+            { number: "5+", label: "Team Members" },
+            { number: "3+", label: "Years Experience" },
           ].map((stat, index) => (
             <motion.div
               key={index}

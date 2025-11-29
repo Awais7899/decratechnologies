@@ -62,15 +62,10 @@ export default function Testimonials() {
                   ))}
                 </div>
                 <p className="text-xl text-[#666666] mb-8 leading-relaxed italic">
-                  "{testimonials[currentIndex].content}"
+                  &quot;{testimonials[currentIndex].content}&quot;
                 </p>
-                <div className="flex items-center justify-center space-x-4">
-                  <img
-                    src={testimonials[currentIndex].image}
-                    alt={testimonials[currentIndex].name}
-                    className="w-16 h-16 rounded-full object-cover"
-                  />
-                  <div className="text-left">
+                <div className="flex items-center justify-center">
+                  <div className="text-center">
                     <div className="font-semibold text-[#1A1A1A]">
                       {testimonials[currentIndex].name}
                     </div>
@@ -151,14 +146,9 @@ export default function Testimonials() {
                   ))}
                 </div>
                 <p className="text-[#666666] mb-4 text-sm leading-relaxed">
-                  "{testimonial.content}"
+                  &quot;{testimonial.content}&quot;
                 </p>
-                <div className="flex items-center space-x-3">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover"
-                  />
+                <div className="flex items-center">
                   <div>
                     <div className="font-semibold text-[#1A1A1A] text-sm">
                       {testimonial.name}
