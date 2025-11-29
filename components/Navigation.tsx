@@ -40,7 +40,10 @@ export default function Navigation() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2 group">
+          <Link
+            href="/"
+            className="flex items-center space-x-2 group no-underline hover:no-underline"
+          >
             <Image
               src="/assets/images/logo.jpg"
               alt="Decra Technologies Logo"
@@ -62,7 +65,7 @@ export default function Navigation() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative group"
+                  className="relative group no-underline hover:no-underline"
                 >
                   <span
                     className={`text-sm font-medium transition-colors ${
@@ -92,7 +95,7 @@ export default function Navigation() {
 
           {/* CTA Button */}
           <div className="hidden lg:block">
-            <Link href="/contact">
+            <Link href="/contact" className="no-underline hover:no-underline">
               <motion.button
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.98 }}
@@ -135,7 +138,7 @@ export default function Navigation() {
                     key={link.href}
                     href={link.href}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                    className={`block px-4 py-3 rounded-lg text-base font-medium transition-colors no-underline hover:no-underline ${
                       isActive
                         ? "bg-[#FF7A00] text-white"
                         : "text-[#1A1A1A] hover:bg-gray-50"
@@ -149,6 +152,7 @@ export default function Navigation() {
                 <Link
                   href="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
+                  className="no-underline hover:no-underline"
                 >
                   <motion.button
                     whileTap={{ scale: 0.98 }}
