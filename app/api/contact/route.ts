@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from "next/server";
 
 // Email Configuration - Add your credentials here
-const RESEND_API_KEY = process.env.RESEND_API_KEY || "YOUR_RESEND_API_KEY_HERE";
-const FROM_EMAIL = process.env.FROM_EMAIL || "onboarding@resend.dev";
+const RESEND_API_KEY = "re_2XbPgkCH_3wPNwPVPUeKP1KLKbpWCVfD1";
+const FROM_EMAIL = "onboarding@resend.dev";
 const RECIPIENT_EMAIL = "decratechnologies@gmail.com";
 
 export async function POST(request: NextRequest) {
