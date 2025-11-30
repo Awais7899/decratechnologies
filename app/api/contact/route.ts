@@ -92,7 +92,7 @@ ${message.replace(/</g, "&lt;").replace(/>/g, "&gt;")}
     `;
 
     // Send email using Resend
-    if (RESEND_API_KEY && RESEND_API_KEY !== "YOUR_RESEND_API_KEY_HERE") {
+    if (RESEND_API_KEY && RESEND_API_KEY.trim().length > 0) {
       try {
         const resendResponse = await fetch("https://api.resend.com/emails", {
           method: "POST",
