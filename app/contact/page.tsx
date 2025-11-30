@@ -3,7 +3,15 @@
 import { motion } from "framer-motion";
 import Section from "@/components/ui/Section";
 import Button from "@/components/ui/Button";
-import { Mail, Phone, MapPin, Send } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  Loader2,
+  CheckCircle2,
+  XCircle,
+} from "lucide-react";
 import { useState } from "react";
 
 const fadeInUp = {
@@ -35,12 +43,61 @@ export default function Contact() {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Thank you for your message! We will get back to you soon.");
-    setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+      console.log("data======", data);
+
+      if (response.ok && data.success) {
+        setSubmitStatus({
+          type: "success",
+          message: "Thank you for your message! We will get back to you soon.",
+        });
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        });
+
+        // Clear success message after 5 seconds
+        setTimeout(() => {
+          setSubmitStatus({ type: null, message: "" });
+        }, 5000);
+      } else {
+        setSubmitStatus({
+          type: "error",
+          message: data.error || "Failed to send message. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        type: "error",
+        message: "An error occurred. Please try again later.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -217,12 +274,49 @@ export default function Contact() {
                 </motion.div>
 
                 <motion.div variants={contactItemVariants}>
-                  <Button type="submit" size="md" className="w-full group">
-                    Send Message
-                    <Send
-                      className="ml-2 inline group-hover:translate-x-1 transition-transform"
-                      size={18}
-                    />
+                  {submitStatus.type && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      className={`mb-4 p-4 rounded-lg flex items-center gap-3 ${
+                        submitStatus.type === "success"
+                          ? "bg-green-50 border border-green-200 text-green-800"
+                          : "bg-red-50 border border-red-200 text-red-800"
+                      }`}
+                    >
+                      {submitStatus.type === "success" ? (
+                        <CheckCircle2 size={20} className="flex-shrink-0" />
+                      ) : (
+                        <XCircle size={20} className="flex-shrink-0" />
+                      )}
+                      <p className="text-sm font-medium">
+                        {submitStatus.message}
+                      </p>
+                    </motion.div>
+                  )}
+                  <Button
+                    type="submit"
+                    size="md"
+                    className="w-full group"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2
+                          className="mr-2 inline animate-spin"
+                          size={18}
+                        />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Send Message
+                        <Send
+                          className="ml-2 inline group-hover:translate-x-1 transition-transform"
+                          size={18}
+                        />
+                      </>
+                    )}
                   </Button>
                 </motion.div>
               </motion.form>
