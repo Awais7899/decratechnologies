@@ -73,11 +73,11 @@ function PortfolioClient() {
               <div className="relative overflow-hidden h-64">
                 <Image
                   src={item.image}
-                  alt={item.title}
+                  alt={`${item.title} - ${item.category} project by Decra Technologies`}
                   width={800}
                   height={600}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                  unoptimized
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-[#FF7A00] opacity-0 group-hover:opacity-90 transition-opacity duration-300 flex items-center justify-center">
                   <a

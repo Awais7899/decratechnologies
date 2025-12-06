@@ -153,8 +153,9 @@ export default function About() {
                 <div className="relative mb-4">
                   <img
                     src={member.image}
-                    alt={member.name}
+                    alt={`${member.name} - ${member.role} at Decra Technologies`}
                     className="w-32 h-32 rounded-full mx-auto object-cover"
+                    loading="lazy"
                   />
                 </div>
                 <h3 className="text-xl font-semibold text-[#1A1A1A] mb-1">
