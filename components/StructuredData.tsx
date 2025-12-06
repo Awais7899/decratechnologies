@@ -12,10 +12,16 @@ export default function StructuredData({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Decra Technologies",
+    alternateName: "Decra",
+    legalName: "Decra Technologies",
     url: baseUrl,
     logo: `${baseUrl}/assets/images/logo.jpg`,
+    brand: {
+      "@type": "Brand",
+      name: "Decra",
+    },
     description:
-      "Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity services.",
+      "Decra Technologies - Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity services.",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Ibrox Street",
@@ -41,7 +47,8 @@ export default function StructuredData({
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "Decra Technologies",
+    name: "Decra",
+    alternateName: "Decra Technologies",
     url: baseUrl,
     potentialAction: {
       "@type": "SearchAction",
@@ -58,6 +65,7 @@ export default function StructuredData({
     "@type": "LocalBusiness",
     "@id": `${baseUrl}#organization`,
     name: "Decra Technologies",
+    alternateName: "Decra",
     image: `${baseUrl}/assets/images/logo.jpg`,
     description:
       "Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity services.",

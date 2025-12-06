@@ -22,12 +22,17 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Decra Technologies - Innovative IT Solutions & Services",
-    template: "%s | Decra Technologies",
+    default: "Decra - Innovative IT Solutions & Technology Services",
+    template: "%s | Decra",
   },
   description:
-    "Decra Technologies provides cutting-edge IT services including web development, mobile apps, cloud solutions, cybersecurity, and digital transformation. Transform your business with innovative technology solutions.",
+    "Decra Technologies - Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity. Transform your business with Decra's innovative technology solutions.",
   keywords: [
+    "Decra",
+    "Decra Technologies",
+    "Decra IT services",
+    "Decra web development",
+    "Decra software",
     "IT services",
     "web development",
     "mobile app development",
@@ -59,24 +64,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: siteUrl,
-    siteName: "Decra Technologies",
-    title: "Decra Technologies - Innovative IT Solutions & Services",
+    siteName: "Decra",
+    title: "Decra - Innovative IT Solutions & Technology Services",
     description:
-      "Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity services. Transform your business with innovative technology.",
+      "Decra Technologies - Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity. Transform your business with Decra.",
     images: [
       {
         url: `${siteUrl}/assets/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: "Decra Technologies - IT Solutions & Services",
+        alt: "Decra - IT Solutions & Services",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Decra Technologies - Innovative IT Solutions & Services",
+    title: "Decra - Innovative IT Solutions & Technology Services",
     description:
-      "Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity services.",
+      "Decra Technologies - Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity.",
     images: [`${siteUrl}/assets/images/og-image.jpg`],
     creator: "@decra_technologies",
   },
@@ -85,11 +90,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/assets/images/logo.jpg", sizes: "any" },
-      { url: "/assets/images/favicon.ico", sizes: "32x32" },
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
     ],
-    shortcut: "/assets/images/logo.jpg",
-    apple: "/assets/images/logo.jpg",
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
   },
   category: "technology",
 };

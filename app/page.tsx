@@ -78,7 +78,9 @@ export default function Home() {
                 variants={fadeInUp}
                 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight"
               >
-                <span className="block text-[#1A1A1A]">Transform Your</span>
+                <span className="block text-[#1A1A1A]">
+                  <span className="text-[#FF7A00]">Decra</span> - Transform Your
+                </span>
                 <span className="block bg-gradient-to-r from-[#FF7A00] via-[#FF9A33] to-[#FF7A00] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient">
                   Business Today
                 </span>
@@ -88,7 +90,8 @@ export default function Home() {
                 variants={fadeInUp}
                 className="text-xl text-[#666666] leading-relaxed max-w-xl"
               >
-                We deliver cutting-edge technology solutions that drive growth,
+                <strong className="text-[#FF7A00]">Decra Technologies</strong>{" "}
+                delivers cutting-edge technology solutions that drive growth,
                 innovation, and success for businesses worldwide.
               </motion.p>
 
