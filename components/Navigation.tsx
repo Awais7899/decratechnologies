@@ -45,7 +45,7 @@ export default function Navigation() {
             className="flex items-center space-x-2 group no-underline hover:no-underline"
           >
             <Image
-              src="/assets/images/logo.jpg"
+              src="/assets/images/logo.png"
               alt="Decra Technologies Logo"
               width={40}
               height={40}

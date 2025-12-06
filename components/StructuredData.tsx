@@ -15,7 +15,7 @@ export default function StructuredData({
     alternateName: "Decra",
     legalName: "Decra Technologies",
     url: baseUrl,
-    logo: `${baseUrl}/assets/images/logo.jpg`,
+    logo: `${baseUrl}/assets/images/logo.png`,
     brand: {
       "@type": "Brand",
       name: "Decra",
@@ -75,7 +75,7 @@ export default function StructuredData({
     "@id": `${baseUrl}#organization`,
     name: "Decra Technologies",
     alternateName: "Decra",
-    image: `${baseUrl}/assets/images/logo.jpg`,
+    image: `${baseUrl}/assets/images/logo.png`,
     description:
       "Leading IT services company providing web development, mobile apps, cloud solutions, and cybersecurity services.",
     address: {
