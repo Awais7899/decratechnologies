@@ -1,13 +1,9 @@
-import { Metadata } from "next";
-
 interface StructuredDataProps {
   type?: "Organization" | "WebSite" | "Service" | "LocalBusiness";
-  pageUrl?: string;
 }
 
 export default function StructuredData({
   type = "Organization",
-  pageUrl,
 }: StructuredDataProps) {
   const baseUrl =
     process.env.NEXT_PUBLIC_SITE_URL || "https://www.decratechnologies.com";
@@ -138,10 +134,16 @@ export default function StructuredData({
     },
   };
 
-  let schema = organizationSchema;
-  if (type === "WebSite") schema = websiteSchema;
-  if (type === "LocalBusiness") schema = localBusinessSchema;
-  if (type === "Service") schema = serviceSchema;
+  let schema: Record<string, unknown>;
+  if (type === "WebSite") {
+    schema = websiteSchema;
+  } else if (type === "LocalBusiness") {
+    schema = localBusinessSchema;
+  } else if (type === "Service") {
+    schema = serviceSchema;
+  } else {
+    schema = organizationSchema;
+  }
 
   return (
     <script

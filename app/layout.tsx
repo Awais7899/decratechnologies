@@ -91,12 +91,6 @@ export const metadata: Metadata = {
     shortcut: "/assets/images/logo.jpg",
     apple: "/assets/images/logo.jpg",
   },
-  verification: {
-    // Add your verification codes here when available
-    // google: "your-google-verification-code",
-    // yandex: "your-yandex-verification-code",
-    // bing: "your-bing-verification-code",
-  },
   category: "technology",
 };
 
