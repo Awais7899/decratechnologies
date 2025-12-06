@@ -53,7 +53,7 @@ export default function Navigation() {
               priority
             />
             <span className="text-xl font-bold text-[#1A1A1A] group-hover:text-[#FF7A00] transition-colors">
-              Decra Technologies
+              <span className="text-[#FF7A00]">Decra</span> Technologies
             </span>
           </Link>
 

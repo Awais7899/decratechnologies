@@ -125,9 +125,9 @@ export default function Home() {
                 className="grid grid-cols-3 gap-6 pt-8"
               >
                 {[
-                  { number: "15+", label: "Projects" },
-                  { number: "98%", label: "Satisfaction" },
-                  { number: "5+", label: "Experts" },
+                  { number: "15+", label: "Decra Projects" },
+                  { number: "98%", label: "Client Satisfaction" },
+                  { number: "5+", label: "Decra Experts" },
                 ].map((stat, index) => (
                   <div key={index} className="text-center">
                     <div className="text-3xl font-black text-[#FF7A00]">
@@ -257,34 +257,35 @@ export default function Home() {
             className="text-center mb-10"
           >
             <h2 className="text-4xl sm:text-5xl font-black text-[#1A1A1A] mb-4">
-              Why Choose <span className="text-gradient">Us</span>
+              Why Choose <span className="text-[#FF7A00]">Decra</span>
             </h2>
             <p className="text-xl text-[#666666] max-w-2xl mx-auto">
-              We combine expertise, innovation, and dedication to deliver
-              exceptional results
+              <strong className="text-[#FF7A00]">Decra Technologies</strong>{" "}
+              combines expertise, innovation, and dedication to deliver
+              exceptional results for businesses worldwide
             </p>
           </motion.div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "Expert Team",
+                title: "Expert Decra Team",
                 description:
-                  "Our team consists of experienced professionals dedicated to your success.",
+                  "Decra's team consists of experienced professionals dedicated to your success.",
                 icon: Sparkles,
                 color: "from-[#FF7A00] to-[#FF9A33]",
               },
               {
-                title: "Innovative Solutions",
+                title: "Decra's Innovative Solutions",
                 description:
-                  "We leverage the latest technologies to deliver cutting-edge solutions.",
+                  "Decra Technologies leverages the latest technologies to deliver cutting-edge solutions.",
                 icon: Zap,
                 color: "from-[#FF9A33] to-[#FF7A00]",
               },
               {
-                title: "Proven Results",
+                title: "Decra's Proven Results",
                 description:
-                  "Track record of successful projects and satisfied clients worldwide.",
+                  "Decra has a track record of successful projects and satisfied clients worldwide.",
                 icon: CheckCircle2,
                 color: "from-[#FF7A00] to-[#E66A00]",
               },
@@ -319,6 +320,39 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Brand Section - New */}
+      <Section className="bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-12 max-w-4xl mx-auto"
+          >
+            <h2 className="text-4xl sm:text-5xl font-black text-[#1A1A1A] mb-6">
+              About <span className="text-[#FF7A00]">Decra</span>
+            </h2>
+            <p className="text-xl text-[#666666] leading-relaxed mb-4">
+              <strong className="text-[#FF7A00]">Decra</strong> is a leading
+              technology company specializing in innovative IT solutions. When
+              you search for <strong>&quot;Decra&quot;</strong>, you&apos;re
+              looking for <strong>Decra Technologies</strong> - your trusted
+              partner for web development, mobile apps, cloud solutions, and
+              cybersecurity services.
+            </p>
+            <p className="text-lg text-[#666666] leading-relaxed">
+              Based in Glasgow, UK, <strong>Decra</strong> has been helping
+              businesses worldwide transform their operations through
+              cutting-edge technology. Whether you need{" "}
+              <strong>Decra software</strong>,{" "}
+              <strong>Decra IT services</strong>, or{" "}
+              <strong>Decra web development</strong>, we deliver excellence.
+            </p>
+          </motion.div>
+        </div>
+      </Section>
+
       {/* Services Preview - Redesigned */}
       <Section className="bg-gradient-to-b from-gray-50 to-white relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -330,10 +364,11 @@ export default function Home() {
             className="text-center mb-10"
           >
             <h2 className="text-4xl sm:text-5xl font-black text-[#1A1A1A] mb-4">
-              Our <span className="text-gradient">Services</span>
+              <span className="text-[#FF7A00]">Decra</span> Services
             </h2>
             <p className="text-xl text-[#666666] max-w-2xl mx-auto">
-              Comprehensive technology solutions tailored to your business needs
+              <strong>Decra Technologies</strong> provides comprehensive
+              technology solutions tailored to your business needs
             </p>
           </motion.div>
 
@@ -434,9 +469,8 @@ export default function Home() {
             viewport={{ once: true }}
             className="text-4xl sm:text-5xl lg:text-6xl font-black mb-6 leading-tight"
           >
-            Ready to Transform
-            <br />
-            <span className="text-white/90">Your Business?</span>
+            Ready to Transform Your Business with{" "}
+            <span className="text-white">Decra</span>?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -445,8 +479,9 @@ export default function Home() {
             transition={{ delay: 0.2 }}
             className="text-xl mb-10 text-orange-50 leading-relaxed max-w-2xl mx-auto"
           >
-            Let&apos;s discuss how we can help you achieve your goals with
-            innovative technology solutions that drive real results.
+            <strong>Decra Technologies</strong> helps you achieve your goals
+            with innovative technology solutions that drive real results.
+            Contact Decra today!
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

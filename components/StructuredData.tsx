@@ -42,6 +42,15 @@ export default function StructuredData({
       "https://www.linkedin.com/company/decra-technologies/",
       "https://www.instagram.com/decra_technologies/",
     ],
+    // Additional brand signals for SEO
+    knowsAbout: [
+      "IT Services",
+      "Web Development",
+      "Mobile App Development",
+      "Cloud Solutions",
+      "Cybersecurity",
+    ],
+    slogan: "Decra - Transform Your Business Today",
   };
 
   const websiteSchema = {

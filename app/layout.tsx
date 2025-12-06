@@ -90,16 +90,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/icon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/icon-192x192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512x512.png", sizes: "512x512", type: "image/png" },
+      { url: "/assets/images/logo.jpg", sizes: "any" },
+      { url: "/assets/images/logo.jpg", sizes: "32x32" },
+      { url: "/assets/images/logo.jpg", sizes: "192x192" },
     ],
-    shortcut: "/favicon.ico",
-    apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-    ],
+    shortcut: "/assets/images/logo.jpg",
+    apple: [{ url: "/assets/images/logo.jpg", sizes: "180x180" }],
   },
   category: "technology",
 };
