@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { Metadata } from "next";
-import Button from "@/components/ui/Button";
 
 export const metadata: Metadata = {
   title: "404 - Page Not Found",
@@ -23,11 +22,13 @@ export default function NotFound() {
           The page you are looking for might have been removed, had its name
           changed, or is temporarily unavailable.
         </p>
-        <Link href="/">
-          <Button size="md">Go Back Home</Button>
+        <Link
+          href="/"
+          className="inline-block px-6 py-3 bg-gradient-to-r from-[#FF7A00] to-[#FF9A33] text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105"
+        >
+          Go Back Home
         </Link>
       </div>
     </div>
   );
 }
-
